@@ -68,9 +68,9 @@ function checkAnswer(currentLevel) {
       setTimeout(function() {
         nextSequence();
       }, 1000);
-      // while (userClickedPattern.length > 0) {
-      //   userClickedPattern.pop();
-      // }
+      while (userClickedPattern.length > 0) {
+        userClickedPattern.pop();
+      }
     }
   }
   else{
@@ -83,11 +83,11 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $("body").removeClass("game-over");
     }, 200);
-    startOver();
-    // $(document).keypress(function() {
-    //   // window.location.reload();
-    //   startOver();
-    // });
+    // startOver();
+    $(document).keypress(function() {
+      // window.location.reload();
+      startOver();
+    });
   }
 }
 
